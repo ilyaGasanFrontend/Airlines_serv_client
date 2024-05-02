@@ -1,0 +1,30 @@
+.form {
+    height: 3rem;
+}
+.container_form {
+    height: 100%;
+}
+.full_height {
+    height: 100%;
+}
+.border_radius {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    padding: 0 1rem ;
+    min-width: 9rem;
+    max-width: 10rem;
+    border: none;
+    background-color: #fff;
+    margin-right: 0.2rem;
+}
+.border_radius:first-child {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-left: 1rem;
+}
+.border_radius:last-child {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-right: 1rem;
+}

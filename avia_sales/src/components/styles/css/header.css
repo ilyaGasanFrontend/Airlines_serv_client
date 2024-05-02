@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 7vh;
+}
+.navbar_center {
+    width: 80%;
+}
+.nav_el {
+    margin-right: 3rem;
+    min-width: 5rem;
+}
+.nav_el:hover {
+    text-shadow: 2px 2px 20px #000000;
+}
+.links {
+    text-decoration: none;
+    color: inherit;
+}
+.nav_list {
+    margin-left: 3rem;
+}

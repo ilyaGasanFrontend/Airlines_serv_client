@@ -1,0 +1,53 @@
+.wrapper_content_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem  1rem ;
+    
+background: #353535;
+    border-radius: 20px;
+
+}
+.conteiner_content_img {
+    flex: 19;
+    margin-right: 6rem;
+}
+.img_wrapper {
+    height: 50%;
+    overflow: hidden;
+    border-top-right-radius: 50%;
+    position: relative;
+}
+.img_wrapper::before {
+    position: absolute;
+    content: url(public/mark.png);
+    scale: 0.4;
+    top: -33%;
+    right: 0%;
+    transform: rotate(45deg)
+}
+
+.conteiner_content {
+    flex:13;
+}
+.img_title {
+    width: 100%;
+}
+.short_desc {
+    font-size: 1.3em;
+}
+.short_desc {
+    margin-bottom: 2rem;
+}
+.button {
+    padding: 1.3rem 2.9rem;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.button:hover {
+    border-color: #ffffff00;
+    --tw-bg-opacity: 15%;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
