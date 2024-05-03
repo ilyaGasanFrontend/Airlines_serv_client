@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vue/server-renderer": "^3.4.26",
+    "@vuepic/vue-datepicker": "^8.5.1",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",

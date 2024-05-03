@@ -2,18 +2,18 @@
     <form action="" class="form">
         <div class="container_form">
             <select class="full_height border_radius" name="from" id="">
-                <option value="value1">Значение 1</option>
-                <option value="value2" selected>Значение 2</option>
-                <option value="value3">Значение 3</option>
+                <option v-for="line in airlines"  :value="line.airline_id" :key="airlines.airline_id">
+                    {{ line.airline_name }}
+                </option>
             </select>
 
             <select class="full_height border_radius" name="where" id="">
-                <option value="value1">Значение 1</option>
-                <option value="value2" selected>Значение 2</option>
-                <option value="value3">Значение 3</option>
+                <option v-for="country in countres"  :value="country.country_id" :key="country.country_id">
+                    {{ country.country_name }}
+                </option>
             </select>
+    <VueDatePicker v-model="date"></VueDatePicker>
 
-            <input class="full_height border_radius" type="data" name="when_from">
             <input class="full_height border_radius" type="data" name="when_back">
 
             <input class="full_height border_radius" type="count">
@@ -23,6 +23,11 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+  import VueDatePicker from '@vuepic/vue-datepicker';
+  import '@vuepic/vue-datepicker/dist/main.css'
+  
+  const date = ref();
 import axios from 'axios';
 import Flights from './flights.vue';
 export default {
@@ -31,15 +36,18 @@ export default {
     },
     data() {
         return {
-            flights: [] // Переменная для хранения рейсов
+            countres: [], // Переменная для хранения рейсов
+            airlines: [],
         };
     },
     methods: {
         // Метод для получения рейсов с сервера
         async fetchFlights() {
             try {
-                const response = await axios.get('http://localhost:3000/flights'); // Запрос к серверу
-                this.flights = response.data; // Сохраняем полученные рейсы в переменной flights
+                const response_airlines = await axios.get('http://localhost:3000/airlines'); // Запрос к серверу
+                const response_countres = await axios.get('http://localhost:3000/countries');
+                this.airlines = response_airlines.data; // Сохраняем полученные рейсы в переменной flights
+                this.countres = response_countres.data;
             } catch (error) {
                 console.error('Ошибка при получении рейсов:', error);
                 // Обработка ошибки, например, вывод сообщения об ошибке пользователю

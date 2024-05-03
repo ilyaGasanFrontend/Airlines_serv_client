@@ -3,9 +3,11 @@
 
     <div class="wrapper">
     <Header_layout/>
-      <div class="container_page ">
-        <Section_title class="title"/>
-        <Form_serch class="form"/>
+      <div class="container_page title">
+        <Section_title />
+        <Form_serch style="z-index: 1;"/>
+        <Datapicker/>
+
       </div>
     </div>
   </div>
@@ -15,11 +17,13 @@
 import Header_layout from "./components/header.vue";
 import Section_title from "./components/section_title.vue"
 import Form_serch from "./components/section_sortfind.vue"
+import Datapicker from "./components/test_datapicker.vue"
 export default {
   components: {
     Header_layout,
     Section_title,
-    Form_serch
+    Form_serch,
+    Datapicker, 
   },
   // Other component options can go here
 };
