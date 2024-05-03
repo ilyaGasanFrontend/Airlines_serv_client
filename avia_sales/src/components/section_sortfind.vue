@@ -2,7 +2,7 @@
     <section class="section_title">
         <div class="container_section">
             <div class="wrapper_content_center">
-                <h1>Lets find flight together</h1>
+                <h1 class="title_name">Lets find flight together</h1>
                 <div class="groupe_serch_wrapper">
                    <ul class="list_classes">
                     <li class="el_list " :class="{active: active_el === 'pl'}" @click="toogleStatus('pl')" value="plane">

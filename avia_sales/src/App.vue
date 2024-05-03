@@ -3,9 +3,9 @@
 
     <div class="wrapper">
     <Header_layout/>
-      <div class="container_page title">
-        <Section_title />
-        <Form_serch style="z-index: 1;"/>
+      <div class="container_page ">
+        <Section_title class="title"/>
+        <Form_serch class="form"/>
       </div>
     </div>
   </div>
@@ -44,5 +44,8 @@ export default {
     overflow: hidden;
     border-radius: 50%;
     z-index: 0;
+}
+.form {
+  z-index: 20;
 }
 </style>

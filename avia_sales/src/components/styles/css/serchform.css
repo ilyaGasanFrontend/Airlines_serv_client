@@ -5,6 +5,9 @@
     align-items: center;
     width: 100%;
 }
+.title_name {
+    z-index: 20;
+}
 .container_section {
     width: 100%;
 }
